@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
+
+a:hover{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.main-nav {
+  color: #333;
+  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#nav-logo {
+  font-size: 2.5em;
+  color: #34495e;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.logo-append {
+  color: red;
+}
+
+#desktop-nav {
+  list-style: none;
+  display: inline-block;
+  float: right;
+  padding: 10px;
+}
+
+#desktop-nav li {
+  display: inline-block;
+  margin: 20px;
+  letter-spacing: 2px;
+}
+
+#desktop-nav a li {
+  color: #333;
+}
+
+#desktop-nav a li:hover {
+  color: #c0392b;
+}
+
+#mobile-nav-btn {
+  border: solid 2px lightgrey;
+  border-radius: 5px;
+  padding: 6px 20px;
+  display: none;
+}
+
+#mobile-nav-btn:hover {
+  opacity: .80;
+  cursor: pointer;
+}
+
+#mobile-nav {
+  display: none;
+  color: #333;
+  font-size: 1.5em;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+#mobile-nav a li {
+  list-style: none;
+  color: #333;
+}
+
+#mobile-nav a li:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.desc {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.gender {
+  background-color: red;
+  display: inline-block;
+  color: #fff;
+  padding: 2px 10px;
+  margin: 10px;
+}
+
+.heading {
+  font-size: 3.5em;
+  margin: 10px;
+}
+
+.sub-heading {
+  margin: 10px;
+}
+
+.description {
+  margin: 20px 10px;
+  line-height: 30px;
+  color: #7f8c8d;
+}
+
+.view-more-btn {
+  border: solid red 1px;
+  padding: 10px;
+  background-color: inherit;
+  color: red;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.view-more-btn:hover {
+  opacity: .80;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-right: 10px;
+}
+
+#footer-divider {
+  display: none;
+}
+
+.footer {
+  padding: 30px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.footer a {
+  color: red;
+}
+
+.footer a:hover {
+  opacity: .80;
+}
+
+@media only screen and (min-width: 681px) {
+  #mobile-nav {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #desktop-nav li {
+    display: none;
+  }
+
+  #mobile-nav-btn {
+    display: inline-block;
+  }
+
+  #nav-logo {
+    font-size: 1.9em;
+  }
+
+  .desc {
+    margin: 20px;
+  }
+
+  #footer-divider {
+    display: block;
+  }
+}

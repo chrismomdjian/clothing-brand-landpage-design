@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Landing Page</title>
+    <meta charset="utf-8">
+    <!-- Bootstrap Grid -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="container-fluid main-nav">
+      <a href="#"><h4 id="nav-logo">Site Name<span class="logo-append"> +</span></h4></a>
+      <ul id="desktop-nav">
+        <a href="#"><li>Home</li></a>
+        <a href="#"><li>Products</li></a>
+        <a href="#"><li>Services</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>Contact</li></a>
+        <span id="mobile-nav-btn">MENU</span>
+      </ul>
+    </div>
+
+    <div id="mobile-nav">
+      <ul>
+        <a href="#"><li>HOME</li></a>
+        <a href="#"><li>PRODUCTS</li></a>
+        <a href="#"><li>SERVICES</li></a>
+        <a href="#"><li>ABOUT</li></a>
+        <a href="#"><li>CONTACT</li></a>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+
+        <!-- First Column -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <!-- Model image -->
+          <img src="model2.jpg" alt="Lookbook model" class="img-responsive">
+        </div>
+
+        <!-- Second Column -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 desc">
+          <div class="gender">Mens</div>
+          <h1 class="heading">Heading</h1>
+          <h3 class="sub-heading">Sub-heading</h3>
+          <p class="description">
+            PBR&B lyft kinfolk, DIY tbh tote bag sartorial cornhole pork belly
+            stumptown seitan coloring book YOLO cred la croix. Kitsch quinoa
+            bushwick williamsburg, messenger bag hashtag affogato mumblecore
+            leggings ethical selvage. Gluten-free fashion axe woke flexitarian
+            pitchfork leggings. Celiac small batch cronut godard, marfa irony
+            literally butcher tacos trust fund typewriter letterpress.
+          </p>
+
+          <!-- More info button -->
+          <a href="#">
+            <button type="button" class="view-more-btn"><span class="price">$199.99</span>View more</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr id="footer-divider" />
+
+    <div class="container-fluid footer">
+      <p>&copy; Christian Momdjian - Web Developer - <a href="http://chrismomdjian.com">chrismomdjian.com</a></p>
+    </div>
+  </body>
+
+  <!-- jQuery CDN -->
+  <script
+    src="http://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+
+  // mobile navigation menu toggle
+  $(document).ready(function(){
+    $("#mobile-nav-btn").on("click", function(){
+      $("#mobile-nav").slideToggle();
+    });
+  });
+  </script>
+</html>
