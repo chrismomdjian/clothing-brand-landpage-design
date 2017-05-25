@@ -175,4 +175,8 @@ img {
   #footer-divider {
     display: block;
   }
+
+  .footer {
+    font-size: 1em;
+  }
 }
