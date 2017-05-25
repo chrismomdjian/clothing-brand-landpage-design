@@ -128,6 +128,47 @@ img {
   margin-right: 10px;
 }
 
+#contact-form input {
+  width: 100%;
+  border: none;
+  background-color: lightgrey;
+  font-size: 2em;
+  border-radius: 2px;
+}
+
+#submit-form {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.3em;
+  background-color: #c0392b;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  letter-spacing: 5px;
+}
+
+#submit-form:hover {
+  opacity:.90;
+}
+
+#first-name-error {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+
+#last-name-error {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+
+#email-error {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+
 #footer-divider {
   display: none;
 }

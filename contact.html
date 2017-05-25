@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Landing Page</title>
+    <meta charset="utf-8">
+    <!-- Bootstrap Grid -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="container-fluid main-nav">
+      <a href="#"><h4 id="nav-logo">Site Name<span class="logo-append"> +</span></h4></a>
+      <ul id="desktop-nav">
+        <a href="index.html"><li>Home</li></a>
+        <a href="#"><li>Products</li></a>
+        <a href="#"><li>Services</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="contact.html"><li>Contact</li></a>
+        <span id="mobile-nav-btn">MENU</span>
+      </ul>
+    </div>
+
+    <div id="mobile-nav">
+      <ul>
+        <a href="index.html"><li>HOME</li></a>
+        <a href="#"><li>PRODUCTS</li></a>
+        <a href="#"><li>SERVICES</li></a>
+        <a href="#"><li>ABOUT</li></a>
+        <a href="contact.html"><li>CONTACT</li></a>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+
+        <!-- First Column -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 form">
+          <form action="#" method="post" id="contact-form" name="contact-form">
+
+            <label for="first-name">FIRST NAME</label><br>
+            <input type="text" id="first-name"><br>
+            <div id="first-name-error">
+              Please fill in the first name field.
+            </div>
+
+            <label for="last-name">LAST NAME</label><br>
+            <input type="text" id="last-name"><br>
+            <div id="last-name-error">
+              Please fill in the last name field.
+            </div>
+
+            <label for="email">EMAIL</label><br>
+            <input type="email" id="email"><br>
+            <div id="email-error">
+              Please enter a valid email address.
+            </div>
+            <br>
+            <button type="button" id="submit-form">SUBMIT</button>
+
+          </form>
+        </div>
+
+        <!-- Second Column -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-8">
+
+        </div>
+      </div>
+    </div>
+
+    <hr id="footer-divider" />
+
+    <div class="container-fluid footer">
+      <p>&copy; Christian Momdjian - Web Developer - <a href="http://chrismomdjian.com">chrismomdjian.com</a></p>
+    </div>
+  </body>
+
+  <!-- jQuery CDN -->
+  <script
+    src="http://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+
+  $(document).ready(function(){
+
+    // mobile navigation menu toggle
+    $("#mobile-nav-btn").on("click", function(){
+      $("#mobile-nav").slideToggle();
+    });
+
+    // 1. Make sure that the name field is not empty
+    var isValid = true;
+    var $email = $("#email").val();
+
+    $("#first-name").keyup(function(){
+      var $firstName = $("#first-name").val();
+      if ($firstName == "" || $firstName == null || $firstName.length < 2) {
+        $(this).css({"border": "solid red 3px"});
+        $("#first-name-error").show();
+        isValid = false;
+      } else {
+        $(this).css({"border": "solid lightgreen 3px"});
+        $("#first-name-error").hide();
+        isValid = true;
+      }
+    });
+
+    // 2. Make sure that the last name field is not empty
+    $("#last-name").keyup(function(){
+      var $lastName = $("#last-name").val();
+      if ($lastName == "" || $lastName == null || $lastName.length < 2) {
+        $(this).css({"border": "solid red 3px"});
+        $("#last-name-error").show();
+        isValid = false;
+      } else {
+        $(this).css({"border": "solid lightgreen 3px"});
+        $("#last-name-error").hide();
+        isValid = true;
+      }
+    });
+
+    // 3. Make sure that the email entered is valid
+    $("#email").keyup(function(){
+      var $email = $("#email").val();
+      if ($email == null || $email == "" || $email.length < 5) {
+        $(this).css({"border": "solid red 3px"});
+        $("#email-error").show();
+        isValid = false;
+      } else {
+        $(this).css({"border": "solid lightgreen 3px"});
+        $("#email-error").hide();
+        isValid = true;
+      }
+    });
+
+    // If all fields are valid, then submit form
+    $("#submit-form").on("click", function(){
+      if (isValid) {
+        $("#contact-form").submit();
+      }
+    });
+
+
+
+  });
+
+  </script>
+</html>
