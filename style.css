@@ -31,6 +31,18 @@ img {
   color: red;
 }
 
+.title {
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.sub-title {
+  margin: 16px 0;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
 #desktop-nav {
   list-style: none;
   display: inline-block;
@@ -128,7 +140,11 @@ img {
   margin-right: 10px;
 }
 
-#contact-form input {
+.form-field, .contact-info {
+  margin: 20px 0 0 0;
+}
+
+#contact-form input, #comment {
   width: 100%;
   border: none;
   background-color: lightgrey;
@@ -151,21 +167,18 @@ img {
   opacity:.90;
 }
 
-#first-name-error {
+#first-name-status {
   display: none;
-  color: red;
   font-weight: bold;
 }
 
-#last-name-error {
+#last-name-status {
   display: none;
-  color: red;
   font-weight: bold;
 }
 
-#email-error {
+#email-status {
   display: none;
-  color: red;
   font-weight: bold;
 }
 
